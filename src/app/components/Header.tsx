@@ -4,7 +4,7 @@ import Hero from "./Hero";
 
 export default function Header() {
   return (
-    <header className="flex flex-col items-center gap-10 px-4 py-8 md:px-6 md:py-10 lg:py-12 ">
+    <header className="flex flex-col items-center gap-10 px-4 py-10 md:px-6 md:py-12 md:mb-4 lg:py-14 ">
       <nav>
         <ul className="flex justify-center gap-10">
           <li className="font-semibold text-xl">

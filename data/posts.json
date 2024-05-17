@@ -1,0 +1,32 @@
+[
+  {
+    "title": "임시 게시글 1",
+    "description": "임시 게시글. 블라블라 어쩌구 저쩌구 냠냠",
+    "date": "2024-01-01",
+    "thumbnailPath": "thumbnail-test"
+  },
+  {
+    "title": "임시 게시글 2",
+    "description": "임시 게시글2. 블라블라 어쩌구 저쩌구 냠냠",
+    "date": "2024-01-02",
+    "thumbnailPath": "thumbnail-test"
+  },
+  {
+    "title": "임시 게시글 3",
+    "description": "임시 게시글3. 블라블라 어쩌구 저쩌구 냠냠",
+    "date": "2024-01-03",
+    "thumbnailPath": "thumbnail-test"
+  },
+  {
+    "title": "임시 게시글 4",
+    "description": "임시 게시글4. 블라블라 어쩌구 저쩌구 냠냠 쩝쩝 야호 끼릿끼릿 샤샤샥 어쩌구 저쩌구 블라블라블라",
+    "date": "2024-01-04",
+    "thumbnailPath": "thumbnail-test"
+  },
+  {
+    "title": "임시 게시글 5",
+    "description": "임시 게시글5. 블라블라 어쩌구 저쩌구 냠냠 쩝쩝 야호 끼릿끼릿 샤샤샥 어쩌구 저쩌구 블라블라블라 임시 게시글5. 블라블라 어쩌구 저쩌구 냠냠 쩝쩝 야호 끼릿끼릿 샤샤샥 어쩌구 저쩌구 블라블라블라 임시 게시글5. 블라블라 어쩌구 저쩌구 냠냠 쩝쩝 야호 끼릿끼릿 샤샤샥 어쩌구 저쩌구 블라블라블라",
+    "date": "2024-01-05",
+    "thumbnailPath": "thumbnail-test"
+  }
+]

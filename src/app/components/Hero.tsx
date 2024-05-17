@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import profileImage from "../../../public/kangaroo.png";
+import profileImage from "../../../public/images/kangaroo.png";
 
 export default function Hero() {
   return (

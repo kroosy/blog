@@ -1,4 +1,5 @@
 import MarkdownViewr from "@/app/components/MarkdownViewr";
+import PrevNextPost from "@/app/components/PrevNextPost";
 import { getPostData } from "@/app/service/post";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ type Props = {
 
 export default async function PostPage({ params: { slug } }: Props) {
   const contentPath = decodeURI(slug);
-  const { title, date, content } = await getPostData(contentPath);
+  const { title, date, content, next, prev } = await getPostData(contentPath);
   return (
     <article className="px-6 mx-auto w-full max-w-3xl">
       <div className="py-8 md:py-10 lg:py-12">
@@ -26,6 +27,10 @@ export default async function PostPage({ params: { slug } }: Props) {
         </time>
       </section>
       <MarkdownViewr text={content} />
+      <section className="mt-6 md:mt-10 flex flex-col-reverse md:flex-row md:justify-between">
+        {prev && <PrevNextPost type="prev" post={prev} />}
+        {next && <PrevNextPost type="next" post={next} />}
+      </section>
     </article>
   );
 }

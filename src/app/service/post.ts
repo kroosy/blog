@@ -6,9 +6,16 @@ export type Post = {
   description: string;
   date: Date;
   thumbnailPath: string;
+  contentPath: string;
 };
 
-export const getAllPosts = async () => {
+export type PostData = Post & {
+  content: string;
+  next: Post | null;
+  prev: Post | null;
+};
+
+export const getAllPosts = async (): Promise<Post[]> => {
   const filePath = path.join(process.cwd(), "data", "posts.json");
   const data = await readFile(filePath, "utf-8");
   const posts: Post[] = JSON.parse(data);

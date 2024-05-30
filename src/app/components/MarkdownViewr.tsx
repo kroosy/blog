@@ -11,7 +11,7 @@ type Props = {
 export default function MarkdownViewr({ text }: Props) {
   return (
     <Markdown
-      className="prose prose-slate lg:prose-xl max-w-none"
+      className="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw]}
       components={{

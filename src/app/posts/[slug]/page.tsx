@@ -1,5 +1,5 @@
 import MarkdownViewr from "@/app/components/MarkdownViewr";
-import PrevNextPost from "@/app/components/PrevNextPost";
+import PrevNextPostArea from "@/app/components/PrevNextPostArea";
 import { getPostData } from "@/app/service/post";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   const contentPath = decodeURI(slug);
   const { title, date, content, next, prev } = await getPostData(contentPath);
   return (
-    <article className="px-6 mx-auto w-full max-w-3xl">
+    <article className="px-4 mx-auto w-full max-w-3xl md:px-0">
       <div className="py-8 md:py-10 lg:py-12">
         <Link
           href={"/posts"}
@@ -20,17 +20,14 @@ export default async function PostPage({ params: { slug } }: Props) {
           ← 돌아가기
         </Link>
       </div>
-      <section className="mb-10 prose prose-slate lg:prose-xl max-w-none">
+      <section className="mb-10 prose prose-slate lg:prose-xl max-w-none dark:prose-invert">
         <h1>{title}</h1>
         <time className="italic tracking-tighter text-slate-500">
           {date.toString()}
         </time>
       </section>
       <MarkdownViewr text={content} />
-      <section className="mt-6 md:mt-10 flex flex-col-reverse md:flex-row md:justify-between">
-        {prev && <PrevNextPost type="prev" post={prev} />}
-        {next && <PrevNextPost type="next" post={next} />}
-      </section>
+      <PrevNextPostArea prev={prev} next={next} />
     </article>
   );
 }

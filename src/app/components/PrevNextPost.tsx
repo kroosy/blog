@@ -14,11 +14,11 @@ export default function PrevNextPost({
   const arrowLabel = type === "prev" ? `⇠ ${title}` : `${title} ⇢`;
   return (
     <div className="flex flex-col mt-14">
-      <h2 className="font-semibold tracking-tighter text-slate-800 text-2xl mb-6">
+      <h2 className="font-semibold tracking-tighter text-2xl mb-6">
         {linkLabel}
       </h2>
       <Link href={`/posts/${contentPath}`} className="hover:cursor-pointer">
-        <h2 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+        <h2 className="mb-3 text-3xl font-semibold tracking-tighter md:text-4xl">
           {arrowLabel}
         </h2>
         <time className="italic tracking-tighter text-slate-500">

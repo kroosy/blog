@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import WorkInProgress from "../components/WorkInProgress";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "소개",
+};
 
 export default function AboutPage() {
   return (

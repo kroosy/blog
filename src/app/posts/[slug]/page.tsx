@@ -1,11 +1,23 @@
 import MarkdownViewr from "@/app/components/MarkdownViewr";
 import PrevNextPostArea from "@/app/components/PrevNextPostArea";
 import { getPostData } from "@/app/service/post";
+import { Metadata } from "next";
 import Link from "next/link";
 
 type Props = {
   params: { slug: string };
 };
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const contentPath = decodeURI(slug);
+  const { title, description } = await getPostData(contentPath);
+  return {
+    title: title,
+    description: description,
+  };
+}
 
 export default async function PostPage({ params: { slug } }: Props) {
   const contentPath = decodeURI(slug);

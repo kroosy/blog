@@ -12,12 +12,12 @@ export default function PostCard({
   return (
     <Link href={`/posts/${contentPath}`}>
       <article className="grid grid-cols-1 items-start gap-6 overflow-hidden group hover:cursor-pointer">
-        <div className="aspect-h-3 aspect-w-4 relative">
+        <div className="aspect-[19/10] relative bg-lime-300">
           <Image
             src={`/images/posts/${thumbnailPath}.png`}
             alt={title}
-            width={300}
-            height={200}
+            width={750}
+            height={400}
             objectFit="cover"
             className="group-hover:scale-105 transition-all"
           />

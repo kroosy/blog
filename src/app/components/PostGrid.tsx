@@ -7,7 +7,7 @@ type Props = {
 
 export default function PostGrid({ posts }: Props) {
   return (
-    <ul className="px-6 grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+    <ul className="px-6 grid grid-cols-1 gap-16 lg:grid-cols-2 xl:grid-cols-3">
       {posts.map((post) => (
         <li key={post.title}>
           <PostCard post={post} />

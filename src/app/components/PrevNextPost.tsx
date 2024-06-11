@@ -13,7 +13,7 @@ export default function PrevNextPost({
   const linkLabel = type === "prev" ? "이전글" : "다음글";
   const arrowLabel = type === "prev" ? `⇠ ${title}` : `${title} ⇢`;
   return (
-    <div className="flex flex-col mt-14">
+    <div className="md:w-1/2 flex flex-col mt-14">
       <h2 className="font-semibold tracking-tighter text-2xl mb-6">
         {linkLabel}
       </h2>

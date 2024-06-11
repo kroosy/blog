@@ -23,7 +23,9 @@ export default function PostCard({
           />
         </div>
         <div className="flex flex-col my-2 gap-2">
-          <h3 className="font-semibold text-3xl md:text-4xl">{title}</h3>
+          <h3 className="font-semibold text-3xl md:text-4xl break-keep">
+            {title}
+          </h3>
           <time className="italic">{date.toString()}</time>
           <p className="md:text-lg">{description}</p>
         </div>

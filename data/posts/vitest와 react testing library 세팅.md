@@ -4,7 +4,7 @@ vite + react 환경에서 vitest와 react testing library로 테스트 환경을
 
 본격적인 테스트 환경 세팅을 위한 프로젝트를 준비한다. 나의 경우에는 pnpm을 사용하여 react + ts 프로젝트를 생성해주었다. 이후 명령어는 모두 pnpm로 작성하였다.
 
-```c
+```sh
 pnpm create vite [프로젝트명] --template react-ts
 ```
 
@@ -14,7 +14,7 @@ pnpm create vite [프로젝트명] --template react-ts
 
 ### 1. 라이브러리 설치
 
-```jsx
+```sh
 pnpm add -D vitest
 ```
 
@@ -22,11 +22,11 @@ pnpm add -D vitest
 
 이후 `package.json`에 스크립트를 추가한다.
 
-```jsx
+```json
   "scripts": {
 		...
 		"test": "vitest",
-    "test:run": "vitest run"
+        "test:run": "vitest run"
   },
 ```
 
@@ -34,7 +34,7 @@ pnpm add -D vitest
 
 간단한 함수를 작성한 후 테스트 해보면 테스트가 잘 통과되는 것을 확인할 수 있다.
 
-```jsx
+```js
 // sum.js
 
 export function sum(a, b) {
@@ -42,7 +42,7 @@ export function sum(a, b) {
 }
 ```
 
-```jsx
+```js
 // sum.test.js
 
 import { expect, test } from "vitest";
@@ -59,7 +59,7 @@ vitest는 주로 유틸리티 함수 테스트에 사용된다. 컴포넌트 테
 
 ### 1. 라이브러리 설치
 
-```jsx
+```sh
 pnpm add -D jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event @testing-library/react-hooks
 ```
 
@@ -76,7 +76,7 @@ pnpm add -D jsdom @testing-library/react @testing-library/jest-dom @testing-libr
 
 vitest 설정에서 속성을 추가하여 해당 파일을 매 테스트 이전에 실행하도록 해준다. (3번)
 
-```jsx
+```js
 // vitest-setup.ts
 
 import { afterEach } from "vitest";
@@ -97,7 +97,7 @@ vite 설정 파일에 아래와 같은 설정을 추가한다. 이 글의 예시
 
 만약 이 글과 다르게 vitest 설정 파일을 분리하고 싶다면 [[공식문서]](https://vitest.dev/config/file#managing-vitest-config-file)를 따른다.
 
-```jsx
+```js
 // vite.config.ts
 
 /// <reference types="vitest" />
@@ -121,14 +121,14 @@ export default defineConfig({
 
 ### 4. tsconfig.json 설정 변경
 
-```jsx
+```json
 // tsconfig.json
 
 {
   "compilerOptions": {
     "types": ["vitest/globals"]
   },
-  "include": ["src", "./vitest-setup.ts"],
+  "include": ["src", "./vitest-setup.ts"]
 }
 ```
 

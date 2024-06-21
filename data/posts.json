@@ -2,8 +2,15 @@
   {
     "title": "Github 계정 여러 개 사용하기",
     "description": "Github 계정을 여러 개 생성하고 로컬에서 편하게 관리해보자",
-    "date": "2024-01-22",
+    "date": "2024-03-22",
     "thumbnailPath": "thumbnail",
     "contentPath": "Github 계정 여러 개 사용하기"
+  },
+  {
+    "title": "vitest와 react testing library 세팅",
+    "description": "vite + react환경에서 vitest와 react testing library을 세팅해보자",
+    "date": "2024-04-28",
+    "thumbnailPath": "thumbnail2",
+    "contentPath": "vitest와 react testing library 세팅"
   }
 ]

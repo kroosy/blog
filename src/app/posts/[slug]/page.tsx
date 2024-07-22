@@ -1,6 +1,6 @@
 import MarkdownViewr from "@/app/components/MarkdownViewr";
 import PrevNextPostArea from "@/app/components/PrevNextPostArea";
-import { getPostData } from "@/app/service/post";
+import { getAllPosts, getPostData } from "@/app/service/post";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -42,4 +42,9 @@ export default async function PostPage({ params: { slug } }: Props) {
       <PrevNextPostArea prev={prev} next={next} />
     </article>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ slug: post.contentPath }));
 }

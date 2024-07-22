@@ -13,12 +13,12 @@ export default function PrevNextPost({
   const linkLabel = type === "prev" ? "이전글" : "다음글";
   const arrowLabel = type === "prev" ? `⇠ ${title}` : `${title} ⇢`;
   return (
-    <div className="md:w-1/2 flex flex-col mt-14">
-      <h2 className="font-semibold tracking-tighter text-2xl mb-6">
+    <div className="flex flex-col mt-14">
+      <h2 className="font-semibold tracking-tighter text-xl mb-6">
         {linkLabel}
       </h2>
       <Link href={`/posts/${contentPath}`} className="hover:cursor-pointer">
-        <h2 className="mb-3 text-3xl font-semibold tracking-tighter md:text-4xl">
+        <h2 className="truncate mb-3 text-2xl font-semibold tracking-tighter md:text-3xl">
           {arrowLabel}
         </h2>
         <time className="italic tracking-tighter text-slate-500">

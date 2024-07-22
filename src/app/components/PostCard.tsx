@@ -12,14 +12,14 @@ export default function PostCard({
   return (
     <Link href={`/posts/${contentPath}`}>
       <article className="grid grid-cols-1 items-start gap-6 overflow-hidden group hover:cursor-pointer">
-        <div className="aspect-[19/10] relative">
+        <div className="aspect-[19/10] relative overflow-hidden">
           <Image
+            className="group-hover:scale-105 transition-all"
             src={`/images/posts/${thumbnailPath}.png`}
             alt={title}
             width={750}
             height={400}
-            objectFit="cover"
-            className="group-hover:scale-105 transition-all"
+            priority
           />
         </div>
         <div className="flex flex-col my-2 gap-2">
